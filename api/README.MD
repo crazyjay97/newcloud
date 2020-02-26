@@ -44,6 +44,7 @@ type TestExampleModel{
 * 实现`GraphQLResolver<T>`
 可以注入`GraphQLQueryResolver`返回结果的属性中
 ##### mutation
+* 实现`GraphQLMutationResolver`
 修改相关的操作
 
 
