@@ -1,14 +1,13 @@
-package com.github.crazyjay97.model;
+package com.github.crazyjay97.entity;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Builder
 @Data
-public class TestModel {
+public class Test {
     private Integer id;
     private String name;
     private String version;
     private long testTime;
-    private TestExampleModel example;
 }

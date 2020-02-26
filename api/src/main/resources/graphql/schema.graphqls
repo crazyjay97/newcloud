@@ -1,12 +1,12 @@
-type TestModel{
+type Test{
     id: Int
     name: String
     version: String
     testTime: Long
-    example: TestExampleModel
+    example: TestExample
 }
 
-type TestExampleModel{
+type TestExample{
     id: Int
     name: String
     desc: String
