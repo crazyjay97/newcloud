@@ -1,0 +1,13 @@
+type TestModel{
+    id: Int
+    name: String
+    version: String
+    testTime: Long
+    example: TestExampleModel
+}
+
+type TestExampleModel{
+    id: Int
+    name: String
+    desc: String
+}

@@ -1,0 +1,10 @@
+server:
+  port: 10601
+
+graphql:
+  servlet:
+    mapping: /graphql
+
+spring:
+  profiles:
+    active: @activatedProperties@
