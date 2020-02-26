@@ -3,7 +3,7 @@ type Test{
     name: String
     version: String
     testTime: Long
-    example: TestExample
+    example: [TestExample]
 }
 
 type TestExample{

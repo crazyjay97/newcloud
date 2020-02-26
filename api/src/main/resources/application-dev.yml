@@ -8,4 +8,6 @@ spring:
     password:
     driver-class-name: com.mysql.jdbc.Driver
 
-
+logging:
+  level:
+    com.github.crazyjay97.dao : debug

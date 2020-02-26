@@ -1,3 +1,7 @@
 type Query{
     listTest(page: Int,size: Int): [Test]
 }
+
+type Mutation{
+    addTest(name: String,version: String): Boolean
+}

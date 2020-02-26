@@ -12,3 +12,8 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
   typeAliasesPackage: com.github.crazyjay97.entity
+  global-config:
+    db-config:
+      id-type: none
+
+
