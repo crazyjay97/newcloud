@@ -1,19 +1,26 @@
 package com.github.crazyjay97.resolver;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.github.crazyjay97.entity.TestExample;
+import com.github.crazyjay97.dao.TestDao;
 import com.github.crazyjay97.entity.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Component
 public class TestResolver implements GraphQLQueryResolver {
 
-    public List<Test> listTest(int count) {
-        TestExample example = TestExample.builder().id(10000).name("Test 001").desc("Unit Test").build();
-        Test test = Test.builder().id(1).version("1.0.0").name("test").testTime(System.currentTimeMillis()).build();
-        return Arrays.asList(new Test[]{test});
+    @Autowired
+    private TestDao testDao;
+
+    public List<Test> listTest(int page, int size) {
+        Page<Test> rs = testDao.selectPage(new Page<Test>() {{
+            setSize(size);
+            setPages(page);
+        }}, new QueryWrapper<Test>());
+        return rs.getRecords();
     }
 }

@@ -8,3 +8,7 @@ graphql:
 spring:
   profiles:
     active: @activatedProperties@
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  typeAliasesPackage: com.github.crazyjay97.entity
