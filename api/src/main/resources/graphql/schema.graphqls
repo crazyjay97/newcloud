@@ -9,5 +9,5 @@ type Test{
 type TestExample{
     id: Int
     name: String
-    desc: String
+    description: String
 }

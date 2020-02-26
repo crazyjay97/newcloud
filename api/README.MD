@@ -48,17 +48,31 @@ type TestExampleModel{
 
 
 ##### 测试用例
+
+###### 查询
 ```graphql
 {
-  listTest {
+  listTest(page:1,size:10){
     id
     name
     testTime
     example {
       id
       name
-      desc
+      description
     }
   }
+}
+```
+###### 添加测试
+```graphql
+mutation {
+  addTest(name:"TEST",version:"1.0.0")
+}
+```
+###### 添加测试案例
+```graphql
+mutation {
+  addExample(testId:1,name:"I AM IRON MAN",description:"LOVE 3000 TIMES")
 }
 ```

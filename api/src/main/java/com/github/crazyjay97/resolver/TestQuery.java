@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Component
-public class TestResolver implements GraphQLQueryResolver {
+public class TestQuery implements GraphQLQueryResolver {
 
     @Resource
     private TestDao testDao;
