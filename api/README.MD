@@ -43,7 +43,7 @@ type TestExampleModel{
 对应`root.graphqls`当中查询方法的定义
 * 实现`GraphQLResolver<T>`
 可以注入`GraphQLQueryResolver`返回结果的属性中
-##### mutation
+##### Mutation
 * 实现`GraphQLMutationResolver`
 修改相关的操作
 
