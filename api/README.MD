@@ -67,7 +67,7 @@ type TestExampleModel{
 ```
 ###### 添加测试
 ```graphql
-Mutation {
+mutation {
   addTest(name:"TEST",version:"1.0.0")
 }
 ```
